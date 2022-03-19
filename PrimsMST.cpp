@@ -44,23 +44,6 @@ int spanningTree(int V, vector<vector<int>> adj[]) {
 }
 
 int main() {
-
-  auto cmp = [](vector<int> a, vector<int> b) {
-    return a[0] > b[0]; 
-  };
-
-  priority_queue<vector<int>, vector<vector<int>>, decltype(cmp)> pq(cmp);
-
-  pq.push({ 0, 5});
-  pq.push({ 2, 10});
-  pq.push({ 9, 4});
-  pq.push({ 1, 3});
-  
-  while (!pq.empty()) {
-    auto test = pq.top();
-    pq.pop();
-    cout << test[0] << ", " << test[1] << endl;
-  }
   // 
   return 0;
 }
