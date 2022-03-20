@@ -7,8 +7,8 @@ void dfs(int v, vector<int>& s, dagAdj& adj, bool* visited) {
 
   visited[v] = true;
 
-  for (auto& x : adj[v]) {
-    dfs(x.first, s, adj, visited);
+  for (auto& [vertex, cost] : adj[v]) {
+    dfs(vertex, s, adj, visited);
   }
 
   s.push_back(v);
